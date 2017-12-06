@@ -10,8 +10,8 @@ export class UserService {
   	this.isUserLoggedIn = false;
   }
 
-  setUserLoggedIn() {
-  	this.isUserLoggedIn = true;
+  setUserLoggedInStatus(status) {
+  	this.isUserLoggedIn = status;
    // this.username = 'admin';
    console.log('set user logged in service',this.isUserLoggedIn)
   }

@@ -14,6 +14,7 @@ export class LoginFormComponent implements OnInit {
   constructor(private router:Router, private user:UserService) { }
 
   ngOnInit() {
+    this.user.setUserLoggedInStatus(false);
     console.log('hit');
   }
 
@@ -22,7 +23,7 @@ export class LoginFormComponent implements OnInit {
   	console.log(e);
   	if(this.username === 'admin' && this.password === 'admin') {
       this.notAuthenticated=false;
-      this.user.setUserLoggedIn();
+      this.user.setUserLoggedInStatus(true);
       this.router.navigate(['dashboard']);
     }
     else{
