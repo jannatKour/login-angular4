@@ -1,0 +1,14 @@
+<form>
+  <div class="input">
+    <label>Username: </label>
+    <input type= "text" [(ngModel)]="username" name="Username">
+  </div>
+  <div class="input">
+    <label>Password: </label>
+    <input [(ngModel)]="password" type = "Password" name="Password">
+  </div>
+  <div class="input">
+    <input type="submit" (click)="loginUser($event)" value="Login">
+  </div>
+</form>
+<label *ngIf="notAuthenticated">"The username or password is incorrect" </label>
